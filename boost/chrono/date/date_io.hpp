@@ -62,6 +62,7 @@
 
 #include <istream>
 #include <ostream>
+#include <cstring>
 #include <locale>
 #include <boost/cstdint.hpp>
 #include <boost/chrono.hpp>
@@ -258,6 +259,7 @@ namespace boost
           const std::time_get<charT>& tg =
               std::use_facet<std::time_get<charT> >(is.getloc());
           std::tm t;
+          std::memset(&t, 0, sizeof(std::tm));
           charT pattern[] =
           { '%', 'F' };
           const charT* pb = pattern;
@@ -327,6 +329,7 @@ namespace boost
           const std::time_put<charT>& tp =
               std::use_facet<std::time_put<charT> >(os.getloc());
           std::tm t;
+          std::memset(&t, 0, sizeof(std::tm));
           t.tm_mday = item.to_day();
           t.tm_mon = item.to_month() - 1;
           t.tm_year = item.to_year() - 1900;

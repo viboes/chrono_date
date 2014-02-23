@@ -328,6 +328,7 @@
 #include <exception>
 #include <istream>
 #include <ostream>
+#include <cstring>
 #include <locale>
 #include <stdexcept>
 #include <boost/cstdint.hpp>
@@ -761,6 +762,7 @@ namespace julian
         const std::time_get<charT>& tg = std::use_facet<std::time_get<charT> >
         (is.getloc());
         std::tm t;
+        std::memset(&t, 0, sizeof(std::tm));
         charT pattern[] =
         { '%', 'F'};
         const charT* pb = pattern;
@@ -799,6 +801,7 @@ namespace julian
         const std::time_put<charT>& tp = std::use_facet<std::time_put<charT> >
         (os.getloc());
         std::tm t;
+        std::memset(&t, 0, sizeof(std::tm));
         t.tm_mday = day(item);
         t.tm_mon = month(item) - 1;
         t.tm_year = year(item) - 1900;

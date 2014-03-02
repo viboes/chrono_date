@@ -130,6 +130,8 @@ rule date-run-2-fail ( sources + : name )
     test-suite "perf"
         :
         [ date-run is_leap.cpp  ]
+        #[ date-run no_check.cpp  ]
         [ date-run no_check_month.cpp  ]
+        [ date-run serial_calendar_conversions.cpp  ]
         ;
 

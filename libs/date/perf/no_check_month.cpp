@@ -8,7 +8,7 @@
 #include <boost/chrono/date/date.hpp>
 
 using namespace boost::chrono;
-const int ntimes = 10000;
+const int ntimes = 1000000;
 int main()
 {
   typedef boost::chrono::high_resolution_clock Clock;
@@ -18,7 +18,7 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
         cnt += y+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
@@ -31,11 +31,9 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
-        //year aYear(y,no_check);
-        //cnt += year(y,no_check)+x;
-        cnt += year(y)+x;
+        cnt += month(y,no_check)+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
       }
     //std::cout << std::endl;
@@ -46,10 +44,10 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
-        //year aYear(y);
-        cnt += year(y)+x;
+        //month aYear(y);
+        cnt += month(y)+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
       }
     //std::cout << std::endl;
@@ -61,7 +59,7 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
         cnt += y+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
@@ -74,10 +72,9 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
-        //year aYear(y,no_check);
-        cnt += year(y)+x;
+        cnt += month(y, no_check)+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
       }
     //std::cout << std::endl;
@@ -88,10 +85,10 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
-        //year aYear(y);
-        cnt += year(y)+x;
+        //month aYear(y);
+        cnt += month(y)+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
       }
     //std::cout << std::endl;
@@ -103,7 +100,7 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
         cnt += y+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
@@ -116,10 +113,10 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
-        //year aYear(y,no_check);
-        cnt += year(y)+x;
+        //month aYear(y,no_check);
+        cnt += month(y, no_check)+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
       }
     //std::cout << std::endl;
@@ -130,10 +127,9 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
-        //year aYear(y);
-        cnt += year(y)+x;
+        cnt += month(y)+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
       }
     //std::cout << std::endl;
@@ -145,7 +141,7 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
         cnt += y+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
@@ -160,10 +156,9 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
-        //year aYear(y,no_check);
-        cnt += year(y)+x;
+        cnt += month(y, no_check)+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
       }
     //std::cout << std::endl;
@@ -176,10 +171,10 @@ int main()
     int cnt = 0;
     Clock::time_point t0 = Clock::now();
     for (int x = 0; x < ntimes; ++x)
-      for (int y = -32768; y <= 32767; ++y)
+      for (int y = 1; y <= 12; ++y)
       {
-        //year aYear(y);
-        cnt += year(y)+x;
+        //month aYear(y);
+        cnt += month(y)+x;
         //if (cnt %4096==0) std::cout << cnt << " ";
       }
     //std::cout << std::endl;

@@ -99,7 +99,7 @@ namespace boost
       /**
        * Explicit
        */
-      BOOST_FORCEINLINE BOOST_CONSTEXPR operator unchecked::day() BOOST_NOEXCEPT
+      BOOST_FORCEINLINE BOOST_CONSTEXPR operator unchecked::day() const BOOST_NOEXCEPT
       {
         return unchecked::day(value());
       }

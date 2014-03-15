@@ -28,7 +28,7 @@ namespace boost
       BOOST_FORCEINLINE BOOST_CONSTEXPR nth_1_5_tag(int v) BOOST_NOEXCEPT
       : value_(v)
       {}
-      BOOST_FORCEINLINE BOOST_CONSTEXPR int value() BOOST_NOEXCEPT {return value_;};
+      BOOST_FORCEINLINE BOOST_CONSTEXPR int value() const BOOST_NOEXCEPT {return value_;};
     };
     /**
      * nth 6..31 tag
@@ -39,7 +39,7 @@ namespace boost
       BOOST_FORCEINLINE BOOST_CONSTEXPR nth_6_31_tag(int v) BOOST_NOEXCEPT
       : value_(v)
       {}
-      BOOST_FORCEINLINE BOOST_CONSTEXPR int value() BOOST_NOEXCEPT {return value_;};
+      BOOST_FORCEINLINE BOOST_CONSTEXPR int value() const BOOST_NOEXCEPT {return value_;};
 
     };
     //BOOST_CONSTEXPR_OR_EXTERN_CONST_DCL(nth_tag, last, 0);

@@ -8,7 +8,7 @@
 #include <boost/chrono/date/date.hpp>
 
 using namespace boost::chrono;
-const int ntimes = 1000000;
+const int ntimes = 100000000;
 int main()
 {
   typedef boost::chrono::high_resolution_clock Clock;
@@ -25,7 +25,7 @@ int main()
       }
     //std::cout << std::endl;
     Clock::time_point t1 = Clock::now();
-    std::cout << "none: " << t1 - t0 << " " << cnt << "\n";
+    std::cout << "none:     " << t1 - t0 << " " << cnt << "\n";
   }
   {
     int cnt = 0;
@@ -66,7 +66,7 @@ int main()
       }
     //std::cout << std::endl;
     Clock::time_point t1 = Clock::now();
-    std::cout << "none: " << t1 - t0 << " " << cnt << "\n";
+    std::cout << "none:     " << t1 - t0 << " " << cnt << "\n";
   }
   {
     int cnt = 0;
@@ -107,7 +107,7 @@ int main()
       }
     //std::cout << std::endl;
     Clock::time_point t1 = Clock::now();
-    std::cout << "none: " << t1 - t0 << " " << cnt << "\n";
+    std::cout << "none:     " << t1 - t0 << " " << cnt << "\n";
   }
   {
     int cnt = 0;
@@ -149,7 +149,7 @@ int main()
     //std::cout << std::endl;
     Clock::time_point t1 = Clock::now();
     none_d=t1 - t0;
-    std::cout << "none: " << t1 - t0 << " " << cnt << "\n";
+    std::cout << "none:     " << t1 - t0 << " " << cnt << "\n";
   }
   Clock::duration no_check_d;
   {

@@ -826,7 +826,7 @@ namespace boost
       {
       }
 
-      BOOST_FORCEINLINE BOOST_CHRONO_DATE_CONSTEXPR operator unchecked::ymd_date() BOOST_NOEXCEPT
+      BOOST_FORCEINLINE BOOST_CHRONO_DATE_CONSTEXPR operator unchecked::ymd_date() const BOOST_NOEXCEPT
       {
         return unchecked::ymd_date(year(y_), unchecked::month(m_), unchecked::day(d_));
       }

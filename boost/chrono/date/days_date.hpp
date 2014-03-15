@@ -235,7 +235,7 @@ namespace boost
       /**
        * @Returns: the number of days since an undefined epoch.
        */
-      BOOST_FORCEINLINE BOOST_CONSTEXPR days days_since_epoch() BOOST_NOEXCEPT
+      BOOST_FORCEINLINE BOOST_CONSTEXPR days days_since_epoch() const BOOST_NOEXCEPT
       {
         return days(x_);
       }

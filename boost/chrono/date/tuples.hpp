@@ -569,7 +569,7 @@ namespace boost
       {
       }
 
-      BOOST_FORCEINLINE BOOST_CONSTEXPR operator unchecked::month_day()
+      BOOST_FORCEINLINE BOOST_CONSTEXPR operator unchecked::month_day() const
       {
         return unchecked::month_day(m_, d_);
       }
@@ -756,7 +756,7 @@ namespace boost
       {
         return d_;
       }
-      BOOST_FORCEINLINE BOOST_CONSTEXPR bool is_valid()
+      BOOST_FORCEINLINE BOOST_CONSTEXPR bool is_valid() const
       {
         // @todo implement this function
         return true;
@@ -811,7 +811,7 @@ namespace boost
       {
         return leap_;
       }
-      BOOST_CONSTEXPR bool is_valid()
+      BOOST_CONSTEXPR bool is_valid() const
       {
         // @todo implement this function
         return true;
@@ -848,7 +848,7 @@ namespace boost
       {
         return d_;
       }
-      BOOST_FORCEINLINE BOOST_CONSTEXPR bool is_valid()
+      BOOST_FORCEINLINE BOOST_CONSTEXPR bool is_valid() const
       {
         // @todo implement this function
         return true;
@@ -897,7 +897,7 @@ namespace boost
       {
         return wd_;
       }
-      BOOST_FORCEINLINE BOOST_CONSTEXPR bool is_valid()
+      BOOST_FORCEINLINE BOOST_CONSTEXPR bool is_valid() const
       {
         // @todo implement this function
         return true;

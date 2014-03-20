@@ -21,7 +21,7 @@ namespace boost
   {
 
 days_rep
-days_from_civil_f(int y, int m, int d) noexcept;
+days_from_civil_f(int y, int m, int d) BOOST_NOEXCEPT;
 
 
     /**

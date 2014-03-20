@@ -4,6 +4,15 @@
 #include <boost/chrono/date/config.hpp>
 #include <boost/static_assert.hpp>
 
+#if ! defined BOOST_NO_CXX14_RELAXED_CONSTEXPR
+#if defined __clang__
+#if ! __has_feature(cxx_relaxed_constexpr)
+#define BOOST_NO_CXX14_RELAXED_CONSTEXPR
+#endif
+#else
+#define BOOST_NO_CXX14_RELAXED_CONSTEXPR
+#endif
+#endif
 
 namespace boost {
 
@@ -22,7 +31,7 @@ namespace boost {
 	    civil_from_days(numeric_limits<Int>::max()-719468)]
 	   **/
 
-#if defined __clang__
+#if ! defined BOOST_NO_CXX14_RELAXED_CONSTEXPR
 
 template <class Int>
 constexpr
